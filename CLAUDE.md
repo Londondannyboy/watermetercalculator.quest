@@ -27,6 +27,14 @@ Based on Search Console data (January 2026):
 - "water metre calculator" - Position ~48
 - "water usage calculator uk" - Position ~99
 
+### SEO Strategy
+
+Each page targets specific keywords with:
+- **8+ keyword mentions per section** - ensures topic relevance
+- **Internal links** - topic cluster structure connecting all calculator pages
+- **Authority links** - external links to Ofwat, CCW, Waterwise, Energy Saving Trust, Citizens Advice, Environment Agency
+- **Schema.org markup** - FAQPage and HowTo structured data on homepage
+
 ---
 
 ## V2 Features
@@ -42,9 +50,9 @@ Based on Search Console data (January 2026):
 - [x] AI assistant for water questions (CopilotKit)
 
 ### Additional Pages - COMPLETE
-- [x] /water-bill-calculator - Bill estimation
-- [x] /water-usage-calculator - Usage by activity
-- [x] /metered-vs-unmetered - Comparison guide
+- [x] /water-bill-calculator - Bill estimation (targets "water bill calculator uk")
+- [x] /water-usage-calculator - Usage by activity (targets "water usage calculator uk")
+- [x] /metered-vs-unmetered - Comparison guide (targets "metered vs unmetered")
 
 ### Authentication - COMPLETE
 - [x] Neon Auth integration
@@ -59,8 +67,9 @@ Based on Search Console data (January 2026):
 - Next.js 15 with App Router
 - React 19
 - Tailwind CSS 4
-- @copilotkit/react-core, @copilotkit/react-ui
+- @copilotkit/react-core, @copilotkit/react-ui (v1.50.1 - pinned version)
 - @humeai/voice-react
+- @neondatabase/auth (requires legacy-peer-deps)
 
 ### Backend (Railway)
 - Python 3.11+
@@ -68,16 +77,20 @@ Based on Search Console data (January 2026):
 - Google Gemini 2.0 Flash
 - FastAPI + Uvicorn
 
+### Known Compatibility Issues
+- `.npmrc` contains `legacy-peer-deps=true` - required because @neondatabase/auth expects Next.js 16+
+- CopilotKit pinned to 1.50.1 - version 1.51.3+ has breaking API changes
+
 ---
 
 ## Key Formulas
 
 ### Metered Bill Calculation
 ```
-Daily Usage (L) = (Per Person Usage × Occupants) + Household Shared
-Annual Usage (m³) = Daily × 365 / 1000
-Water Cost = Annual m³ × Water Rate (£1.85/m³)
-Sewage Cost = Annual m³ × Sewage Rate (£1.45/m³)
+Daily Usage (L) = (Per Person Usage x Occupants) + Household Shared
+Annual Usage (m3) = Daily x 365 / 1000
+Water Cost = Annual m3 x Water Rate (£1.85/m3)
+Sewage Cost = Annual m3 x Sewage Rate (£1.45/m3)
 Total = Water Cost + Sewage Cost + Standing Charge (£45/year)
 ```
 
@@ -126,6 +139,7 @@ The agent should:
 AGENT_URL=https://water-agent-production.up.railway.app/agui/
 DATABASE_URL=...
 NEON_AUTH_BASE_URL=...
+NEXT_PUBLIC_NEON_AUTH_URL=...
 HUME_API_KEY=...
 HUME_SECRET_KEY=...
 NEXT_PUBLIC_HUME_CONFIG_ID=...
@@ -135,6 +149,8 @@ NEXT_PUBLIC_HUME_CONFIG_ID=...
 ```env
 GOOGLE_API_KEY=...
 ```
+
+**Important:** When setting environment variables, do not leave spaces, returns, or trailing characters after the value.
 
 ---
 
@@ -156,18 +172,51 @@ cd agent && railway up         # Agent manual deploy
 
 ## Pages Structure
 
-| Page | URL | Status |
-|------|-----|--------|
-| Homepage | `/` | Done |
-| Water Bill Calculator | `/water-bill-calculator` | Done |
-| Water Usage Calculator | `/water-usage-calculator` | Done |
-| Metered vs Unmetered | `/metered-vs-unmetered` | Done |
-| Articles | `/articles` | Done |
-| Contact | `/contact` | Done |
-| Privacy | `/privacy` | Done |
-| Terms | `/terms` | Done |
-| Cookies | `/cookies` | Done |
-| Auth Pages | `/auth/[path]` | Done |
+| Page | URL | Target Keywords | Status |
+|------|-----|-----------------|--------|
+| Homepage | `/` | water meter calculator uk | SEO Optimized |
+| Water Bill Calculator | `/water-bill-calculator` | water bill calculator uk | SEO Optimized |
+| Water Usage Calculator | `/water-usage-calculator` | water usage calculator uk | SEO Optimized |
+| Metered vs Unmetered | `/metered-vs-unmetered` | metered vs unmetered | SEO Optimized |
+| Articles | `/articles` | - | Done |
+| Contact | `/contact` | - | Done |
+| Privacy | `/privacy` | - | Done |
+| Terms | `/terms` | - | Done |
+| Cookies | `/cookies` | - | Done |
+| Auth Pages | `/auth/[path]` | - | Done |
+
+**Total: 9 pages** (as requested)
+
+---
+
+## Topic Cluster Structure
+
+All calculator pages link to each other forming a topic cluster:
+
+```
+Homepage (Water Meter Calculator)
+    |
+    +-- /water-bill-calculator
+    |       |-- links to homepage, /water-usage-calculator, /metered-vs-unmetered
+    |
+    +-- /water-usage-calculator
+    |       |-- links to homepage, /water-bill-calculator, /metered-vs-unmetered
+    |
+    +-- /metered-vs-unmetered
+            |-- links to homepage, /water-bill-calculator, /water-usage-calculator
+```
+
+---
+
+## Authority Links (External)
+
+All SEO pages link to these trusted UK sources:
+- **Ofwat** - https://www.ofwat.gov.uk/ (UK water regulator)
+- **CCW** - https://www.ccw.org.uk/ (Consumer Council for Water)
+- **Waterwise** - https://www.waterwise.org.uk/ (Water efficiency)
+- **Energy Saving Trust** - https://www.energysavingtrust.org.uk/
+- **Citizens Advice** - https://www.citizensadvice.org.uk/consumer/water/water-supply/
+- **Environment Agency** - https://www.gov.uk/government/organisations/environment-agency
 
 ---
 
@@ -196,6 +245,13 @@ Water droplet/beaker icon with "Water Meter Calculator" text
 
 ---
 
+## Deployment URLs
+
+- **Frontend (Vercel):** https://watermetercalculator.quest
+- **Agent (Railway):** https://water-agent-production.up.railway.app
+
+---
+
 ## Future Enhancements
 
 - [ ] Add water company selector with regional rates
@@ -203,3 +259,11 @@ Water droplet/beaker icon with "Water Meter Calculator" text
 - [ ] Add seasonal usage comparison
 - [ ] Add water footprint calculator
 - [ ] Add leak detection guide
+
+---
+
+## Git Commits History
+
+- `b4aa9b9` - Build full water meter calculator site
+- `ad71cb6` - Add .npmrc with legacy-peer-deps
+- `f4721a0` - Pin CopilotKit to v1.50.1
