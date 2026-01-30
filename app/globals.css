@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Summary marker removal for FAQ */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::marker {
+  display: none;
+}
+
+/* CopilotKit z-index fix */
+[data-copilotkit-popup],
+[data-copilotkit-sidebar],
+.copilotkit-dev-console,
+.copilotKitPopup,
+.copilotKitSidebar {
+  z-index: 9999 !important;
+}
+
+/* Ensure CopilotKit button is clickable */
+[data-copilotkit-button],
+.copilotKitButton {
+  z-index: 9998 !important;
+  pointer-events: auto !important;
+}
+
+/* Fix CopilotKit sidebar overlay blocking clicks when closed */
+[data-copilotkit-sidebar][data-state="closed"] ~ *,
+.copilotKitSidebar[data-state="closed"] ~ * {
+  pointer-events: auto !important;
+}
+
+/* Ensure main content is always clickable */
+main {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+/* Fix any potential overlay issues */
+[data-copilotkit-overlay] {
+  pointer-events: none !important;
+}
+
+[data-copilotkit-overlay][data-state="open"] {
+  pointer-events: auto !important;
+}
