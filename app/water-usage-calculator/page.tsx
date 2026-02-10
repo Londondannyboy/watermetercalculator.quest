@@ -2,9 +2,12 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Water Usage Calculator UK | Free Water Consumption Calculator 2026',
-  description: 'Free UK water usage calculator. Calculate your daily and annual water consumption by activity. Our water usage calculator shows how much water showers, baths, toilets, and appliances use.',
+  title: 'Water Usage Calculator UK | Free Consumption Guide',
+  description: 'Free UK water usage calculator. Calculate daily and annual water consumption by activity. See how much water showers, baths, and appliances use.',
   keywords: ['water usage calculator', 'water usage calculator uk', 'water consumption calculator', 'daily water usage', 'household water usage', 'calculate water usage', 'water usage uk'],
+  alternates: {
+    canonical: 'https://watermetercalculator.quest/water-usage-calculator',
+  },
 }
 
 const usageData = [

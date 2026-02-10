@@ -127,8 +127,8 @@ export default function HomePage() {
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-8">
-            Use our free <strong>water meter calculator</strong> to find out if switching to a <strong>water meter</strong> could save you money.
-            This <strong>water meter calculator UK</strong> compares your estimated metered and unmetered water bills instantly.
+            Use our free <strong>water meter calculator UK</strong> to find out if switching to a <strong>water meter</strong> could save you money.
+            This <strong>UK water meter calculator</strong> compares your estimated metered and unmetered water bills instantly.
           </p>
 
           {/* Voice Assistant */}
@@ -164,7 +164,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-white mb-2">Free Water Meter Calculator UK</h2>
-            <p className="text-slate-400">Enter your details below to calculate if a <strong>water meter</strong> will save you money</p>
+            <p className="text-slate-400">Enter your details below to calculate if a <strong>water meter UK</strong> will save you money</p>
           </div>
           <WaterMeterCalculator />
         </div>

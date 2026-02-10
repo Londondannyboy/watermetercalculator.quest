@@ -14,10 +14,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Water Meter Calculator UK | Free Water Usage & Savings Calculator 2026",
-    template: "%s | Water Meter Calculator UK"
+    default: "Water Meter Calculator UK | Free Savings Calculator",
+    template: "%s | Water Meter Calculator Quest"
   },
-  description: "Free UK water meter calculator to estimate if switching to a water meter will save you money. Calculate your water usage, compare metered vs unmetered bills, and discover potential savings for your household.",
+  description: "Free UK water meter calculator. Estimate if switching to a water meter will save money. Compare metered vs unmetered bills for your household.",
   keywords: [
     "water meter calculator",
     "water meter calculator uk",
@@ -34,25 +34,25 @@ export const metadata: Metadata = {
     "water meter worth it calculator",
     "uk water meter calculator"
   ],
-  authors: [{ name: "Water Meter Calculator UK" }],
-  creator: "Water Meter Calculator UK",
-  publisher: "Water Meter Calculator UK",
+  authors: [{ name: "Water Meter Calculator Quest" }],
+  creator: "Water Meter Calculator Quest",
+  publisher: "Water Meter Calculator Quest",
   metadataBase: new URL("https://watermetercalculator.quest"),
   alternates: {
-    canonical: "https://watermetercalculator.quest",
+    canonical: "https://watermetercalculator.quest/",
   },
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://watermetercalculator.quest",
-    siteName: "Water Meter Calculator UK",
-    title: "Water Meter Calculator UK | Free Water Usage & Savings Calculator",
-    description: "Free UK water meter calculator. Calculate if switching to a water meter will save you money. Compare metered vs unmetered bills for your household.",
+    siteName: "Water Meter Calculator Quest",
+    title: "Water Meter Calculator UK | Free Savings Calculator",
+    description: "Free UK water meter calculator. Estimate if switching to a water meter will save money. Compare metered vs unmetered bills for your household.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Water Meter Calculator UK | Free Water Savings Calculator",
-    description: "Free UK water meter calculator. Calculate if a water meter will save you money based on your household size and usage.",
+    title: "Water Meter Calculator UK | Free Savings Calculator",
+    description: "Free UK water meter calculator. Estimate if switching saves money. Compare metered vs unmetered bills.",
   },
   robots: {
     index: true,
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     },
   },
   appleWebApp: {
-    title: "Water Meter Calculator UK",
+    title: "Water Meter Calculator Quest",
     capable: true,
     statusBarStyle: "black-translucent",
   },
@@ -76,24 +76,24 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": "https://watermetercalculator.quest/#website",
-  name: "Water Meter Calculator UK",
-  alternateName: ["Water Usage Calculator", "Water Bill Calculator", "Water Savings Calculator"],
+  name: "Water Meter Calculator Quest",
+  alternateName: ["Water Meter Calculator UK", "Water Usage Calculator", "Water Bill Calculator", "Water Savings Calculator"],
   url: "https://watermetercalculator.quest",
   description: "Free UK water meter calculator to help households decide if switching to a water meter will save money. Compare metered vs unmetered water bills.",
   inLanguage: "en-GB",
   publisher: {
     "@type": "Organization",
     "@id": "https://watermetercalculator.quest/#organization",
-    name: "Water Meter Calculator UK",
+    name: "Water Meter Calculator Quest",
     url: "https://watermetercalculator.quest",
     logo: {
       "@type": "ImageObject",
       "@id": "https://watermetercalculator.quest/#logo",
-      url: "https://watermetercalculator.quest/icon.svg",
-      contentUrl: "https://watermetercalculator.quest/icon.svg",
+      url: "https://watermetercalculator.quest/favicon.svg",
+      contentUrl: "https://watermetercalculator.quest/favicon.svg",
       width: 512,
       height: 512,
-      caption: "Water Meter Calculator UK"
+      caption: "Water Meter Calculator Quest"
     }
   }
 }
@@ -102,8 +102,8 @@ const softwareJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "@id": "https://watermetercalculator.quest/#app",
-  name: "Water Meter Calculator UK",
-  alternateName: ["Water Usage Calculator", "Water Bill Calculator", "Metered Water Calculator"],
+  name: "Water Meter Calculator Quest",
+  alternateName: ["Water Meter Calculator UK", "Water Usage Calculator", "Water Bill Calculator", "Metered Water Calculator"],
   description: "Free online water meter calculator for UK households. Calculate if switching to a water meter will save you money. Compare metered vs unmetered bills based on your household size and water usage.",
   applicationCategory: "UtilityApplication",
   operatingSystem: "Any",
@@ -113,11 +113,11 @@ const softwareJsonLd = {
     priceCurrency: "GBP"
   },
   featureList: [
-    "Water meter savings calculator",
+    "Water meter savings calculator UK",
     "Metered vs unmetered comparison",
     "Household water usage estimator",
     "Regional water company rates",
-    "Water bill calculator",
+    "Water bill calculator UK",
     "Usage breakdown by activity",
     "Annual savings projection",
     "Water efficiency tips"
@@ -131,7 +131,7 @@ const breadcrumbJsonLd = {
     {
       "@type": "ListItem",
       position: 1,
-      name: "Water Meter Calculator",
+      name: "Water Meter Calculator UK",
       item: "https://watermetercalculator.quest"
     }
   ]
@@ -149,8 +149,8 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="Water Meter Calculator" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="apple-mobile-web-app-title" content="Water Meter Calculator Quest" />
+        <link rel="manifest" href="/manifest.webmanifest" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}

@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Water Meter Calculator UK',
-    short_name: 'Water Calc',
-    description: 'Free UK water meter calculator to estimate if switching to a water meter will save you money.',
+    name: 'Water Meter Calculator Quest',
+    short_name: 'Water Calc UK',
+    description: 'Free UK water meter calculator. Estimate if switching to a water meter will save money.',
     start_url: '/',
     display: 'standalone',
     background_color: '#0f172a',
@@ -14,6 +14,11 @@ export default function manifest(): MetadataRoute.Manifest {
         src: '/favicon-96x96.png',
         sizes: '96x96',
         type: 'image/png',
+      },
+      {
+        src: '/favicon.svg',
+        sizes: 'any',
+        type: 'image/svg+xml',
       },
       {
         src: '/apple-touch-icon.png',

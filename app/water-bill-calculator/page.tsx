@@ -2,9 +2,12 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Water Bill Calculator UK | Free Water Bill Estimator 2026',
-  description: 'Free UK water bill calculator. Estimate your annual water bill based on usage, water company rates, and standing charges. Calculate metered and unmetered water bills for UK households.',
+  title: 'Water Bill Calculator UK | Free Bill Estimator',
+  description: 'Free UK water bill calculator. Estimate your annual water bill based on usage and water company rates. Calculate metered and unmetered bills.',
   keywords: ['water bill calculator', 'water bill calculator uk', 'water bill estimator', 'annual water bill', 'water charges calculator', 'uk water bill', 'water bill uk'],
+  alternates: {
+    canonical: 'https://watermetercalculator.quest/water-bill-calculator',
+  },
 }
 
 export default function WaterBillCalculatorPage() {

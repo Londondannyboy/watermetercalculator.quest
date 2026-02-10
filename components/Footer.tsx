@@ -41,7 +41,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Water Meter Calculator UK. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Water Meter Calculator Quest. All rights reserved.</p>
           <p className="mt-2 text-xs">
             Free <strong>water meter calculator</strong> for UK households.
             This tool provides estimates only. Contact your water company for exact rates.

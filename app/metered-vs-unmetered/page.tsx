@@ -2,9 +2,12 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Metered vs Unmetered Water UK | Should You Get a Water Meter? 2026',
-  description: 'Compare metered vs unmetered water billing in the UK. Our metered vs unmetered guide helps you decide if you should get a water meter. Free comparison guide.',
+  title: 'Metered vs Unmetered Water UK | Free Guide',
+  description: 'Compare metered vs unmetered water billing UK. Decide if you should get a water meter with our free metered vs unmetered comparison guide.',
   keywords: ['metered vs unmetered', 'metered vs unmetered water', 'should i get a water meter', 'water meter benefits', 'unmetered water bills', 'metered water bills uk', 'metered or unmetered'],
+  alternates: {
+    canonical: 'https://watermetercalculator.quest/metered-vs-unmetered',
+  },
 }
 
 export default function MeteredVsUnmeteredPage() {
