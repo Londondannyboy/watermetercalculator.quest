@@ -156,10 +156,11 @@ export function WaterMeterCalculator() {
             <h3 className="text-lg font-semibold text-white mb-4">Your Household</h3>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm text-slate-400 mb-2">
+                <label htmlFor="occupants" className="block text-sm text-slate-400 mb-2">
                   Number of People
                 </label>
                 <select
+                  id="occupants"
                   value={occupants}
                   onChange={(e) => setOccupants(parseInt(e.target.value))}
                   className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
@@ -170,10 +171,11 @@ export function WaterMeterCalculator() {
                 </select>
               </div>
               <div>
-                <label className="block text-sm text-slate-400 mb-2">
+                <label htmlFor="bedrooms" className="block text-sm text-slate-400 mb-2">
                   Number of Bedrooms
                 </label>
                 <select
+                  id="bedrooms"
                   value={bedrooms}
                   onChange={(e) => setBedrooms(parseInt(e.target.value))}
                   className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
@@ -191,10 +193,11 @@ export function WaterMeterCalculator() {
             <h3 className="text-lg font-semibold text-white mb-4">Water Usage (per person)</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm text-slate-400 mb-2">
+                <label htmlFor="showerMinutes" className="block text-sm text-slate-400 mb-2">
                   Shower length (minutes)
                 </label>
                 <input
+                  id="showerMinutes"
                   type="number"
                   min="0"
                   max="30"
@@ -204,10 +207,11 @@ export function WaterMeterCalculator() {
                 />
               </div>
               <div>
-                <label className="block text-sm text-slate-400 mb-2">
+                <label htmlFor="showersPerWeek" className="block text-sm text-slate-400 mb-2">
                   Showers per week (each)
                 </label>
                 <input
+                  id="showersPerWeek"
                   type="number"
                   min="0"
                   max="21"
@@ -217,10 +221,11 @@ export function WaterMeterCalculator() {
                 />
               </div>
               <div>
-                <label className="block text-sm text-slate-400 mb-2">
+                <label htmlFor="bathsPerWeek" className="block text-sm text-slate-400 mb-2">
                   Baths per week (each)
                 </label>
                 <input
+                  id="bathsPerWeek"
                   type="number"
                   min="0"
                   max="14"
@@ -230,10 +235,11 @@ export function WaterMeterCalculator() {
                 />
               </div>
               <div>
-                <label className="block text-sm text-slate-400 mb-2">
+                <label htmlFor="toiletFlushes" className="block text-sm text-slate-400 mb-2">
                   Toilet flushes per day (each)
                 </label>
                 <input
+                  id="toiletFlushes"
                   type="number"
                   min="0"
                   max="15"
@@ -250,10 +256,11 @@ export function WaterMeterCalculator() {
             <h3 className="text-lg font-semibold text-white mb-4">Household Usage</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm text-slate-400 mb-2">
+                <label htmlFor="washingLoads" className="block text-sm text-slate-400 mb-2">
                   Washing machine loads/week
                 </label>
                 <input
+                  id="washingLoads"
                   type="number"
                   min="0"
                   max="20"
@@ -263,10 +270,11 @@ export function WaterMeterCalculator() {
                 />
               </div>
               <div>
-                <label className="block text-sm text-slate-400 mb-2">
+                <label htmlFor="dishwasherLoads" className="block text-sm text-slate-400 mb-2">
                   Dishwasher loads/week
                 </label>
                 <input
+                  id="dishwasherLoads"
                   type="number"
                   min="0"
                   max="20"
@@ -278,8 +286,9 @@ export function WaterMeterCalculator() {
             </div>
 
             <div className="mt-4">
-              <label className="flex items-center gap-3 cursor-pointer">
+              <label htmlFor="hasGarden" className="flex items-center gap-3 cursor-pointer">
                 <input
+                  id="hasGarden"
                   type="checkbox"
                   checked={hasGarden}
                   onChange={(e) => setHasGarden(e.target.checked)}
@@ -290,10 +299,11 @@ export function WaterMeterCalculator() {
 
               {hasGarden && (
                 <div className="mt-3">
-                  <label className="block text-sm text-slate-400 mb-2">
+                  <label htmlFor="gardenMinutes" className="block text-sm text-slate-400 mb-2">
                     Garden watering (minutes/week in summer)
                   </label>
                   <input
+                    id="gardenMinutes"
                     type="number"
                     min="0"
                     max="300"
@@ -327,10 +337,11 @@ export function WaterMeterCalculator() {
               <div className="mt-4 p-4 bg-slate-900/50 rounded-xl border border-slate-700/50">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div>
-                    <label className="block text-sm text-slate-400 mb-2">
+                    <label htmlFor="waterRate" className="block text-sm text-slate-400 mb-2">
                       Water rate (£/m³)
                     </label>
                     <input
+                      id="waterRate"
                       type="number"
                       step="0.01"
                       min="0"
@@ -340,10 +351,11 @@ export function WaterMeterCalculator() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm text-slate-400 mb-2">
+                    <label htmlFor="sewageRate" className="block text-sm text-slate-400 mb-2">
                       Sewage rate (£/m³)
                     </label>
                     <input
+                      id="sewageRate"
                       type="number"
                       step="0.01"
                       min="0"
@@ -353,10 +365,11 @@ export function WaterMeterCalculator() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm text-slate-400 mb-2">
+                    <label htmlFor="standingCharge" className="block text-sm text-slate-400 mb-2">
                       Standing charge (£/year)
                     </label>
                     <input
+                      id="standingCharge"
                       type="number"
                       step="1"
                       min="0"
