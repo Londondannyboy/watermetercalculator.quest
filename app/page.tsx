@@ -1,5 +1,4 @@
 import { WaterMeterCalculator } from '@/components/WaterMeterCalculator'
-import { HeroVoice } from '@/components/HeroVoice'
 import Link from 'next/link'
 
 const faqs = [
@@ -131,9 +130,25 @@ export default function HomePage() {
             This <strong>UK water meter calculator</strong> compares your estimated metered and unmetered water bills instantly.
           </p>
 
-          {/* Voice Assistant */}
+          {/* Voice Assistant CTA */}
           <div className="mb-8">
-            <HeroVoice />
+            <Link
+              href="/assistant"
+              className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 border border-cyan-500/30 rounded-2xl transition-all group"
+            >
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
+                <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                </svg>
+              </div>
+              <div className="text-left">
+                <p className="text-white font-semibold group-hover:text-cyan-400 transition-colors">Voice Assistant</p>
+                <p className="text-slate-400 text-sm">Ask questions about water meters</p>
+              </div>
+              <svg className="w-5 h-5 text-slate-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-400">
