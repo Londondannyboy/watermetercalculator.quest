@@ -7,8 +7,16 @@ const faqs = [
     answer: "A water meter calculator UK is a free online tool that helps UK households estimate whether switching to a water meter will save money. The water meter calculator compares your likely metered water costs based on actual usage with your current unmetered charges based on your property's rateable value. Using a water meter calculator is the first step to understanding if a water meter is right for you."
   },
   {
+    question: "How does the water meter reading calculator UK work?",
+    answer: "Our water meter reading calculator UK estimates your water usage in cubic metres (m³) based on your household activities. If you already have a water meter, you can use actual meter readings to calculate exact costs. The water meter reading calculator converts daily usage (showers, baths, appliances) into annual consumption, then applies UK water rates to estimate your bill."
+  },
+  {
     question: "Who typically saves money with a water meter calculator?",
     answer: "According to the Consumer Council for Water (CCW), households with fewer people than bedrooms benefit most from water meters. Our water meter calculator UK shows that single people and couples in larger properties often see savings of £100-200 per year. The water meter calculator helps you determine your specific situation before contacting your water company."
+  },
+  {
+    question: "What are the current UK water rates for the calculator?",
+    answer: "Our water rates calculator uses average 2025/26 UK rates: approximately £1.85 per cubic metre for water supply and £1.45 per cubic metre for sewerage, plus a standing charge of around £45 per year. Water rates vary by company - Thames Water, United Utilities, and Severn Trent each have different tariffs. Use our water rates calculator for an estimate, then check your water company's exact rates."
   },
   {
     question: "How accurate is the water meter calculator?",
@@ -16,11 +24,15 @@ const faqs = [
   },
   {
     question: "Is it free to get a water meter installed in the UK?",
-    answer: "Yes, as regulated by Ofwat, water companies in England and Wales must install a water meter free of charge when requested. Use our water meter calculator first to check if switching makes financial sense, then contact your water company. The water meter calculator can help you make an informed decision before requesting installation."
+    answer: "Yes, as regulated by Ofwat (the UK government water regulator), water companies in England and Wales must install a water meter free of charge when requested. Use our water meter calculator first to check if switching makes financial sense, then contact your water company. The water meter calculator can help you make an informed decision before requesting installation."
   },
   {
     question: "Can I switch back if a water meter doesn't save money?",
     answer: "Most water companies offer a trial period of 12-24 months during which you can switch back to unmetered billing. Use our water meter calculator UK to estimate your bills before switching, and if the water meter calculator suggests you might pay more, consider staying unmetered or requesting the trial period."
+  },
+  {
+    question: "How do I get a water bill estimate before switching?",
+    answer: "Use our water bills calculator to get a water bill estimate based on your household size and usage. The water bill estimate includes water supply charges, sewerage charges, and standing charges. Our water bills calculator compares your estimated metered bill with typical unmetered charges for your property size, giving you a clear water bill estimate before you decide."
   },
   {
     question: "How are unmetered water bills calculated in the UK?",
@@ -32,7 +44,11 @@ const faqs = [
   },
   {
     question: "Which UK water company rates does the calculator use?",
-    answer: "The water meter calculator UK uses average rates across major water companies including Thames Water, United Utilities, Severn Trent, Yorkshire Water, Anglian Water, and Southern Water. For exact rates, check with your specific water company after using our water meter calculator."
+    answer: "The water meter calculator UK uses average rates across major water companies including Thames Water, United Utilities, Severn Trent, Yorkshire Water, Anglian Water, and Southern Water. For exact rates, check with your specific water company after using our water meter calculator or visit Ofwat's official website for regulated tariff information."
+  },
+  {
+    question: "Is there an official UK government water meter calculator?",
+    answer: "While there's no official UK government water meter calculator, Ofwat (the water services regulation authority) and CCW (Consumer Council for Water) provide guidance on water meters. Our water meter calculator UK follows official guidelines and uses industry-standard rates. For official government information, visit gov.uk or Ofwat's website alongside using our free calculator."
   },
 ]
 

@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Water Bill Calculator UK | Free Bill Estimator',
-  description: 'Free UK water bill calculator. Estimate your annual water bill based on usage and water company rates. Calculate metered and unmetered bills.',
-  keywords: ['water bill calculator', 'water bill calculator uk', 'water bill estimator', 'annual water bill', 'water charges calculator', 'uk water bill', 'water bill uk'],
+  title: 'Water Bill Calculator UK | Free Bill Estimate',
+  description: 'Free UK water bills calculator. Get a water bill estimate based on usage and rates. Calculate metered and unmetered water bills for UK households.',
+  keywords: ['water bill calculator', 'water bill calculator uk', 'water bill estimate', 'water bills estimate', 'water bills calculator', 'annual water bill', 'water charges calculator', 'uk water bill', 'water bill estimator'],
   alternates: {
     canonical: 'https://watermetercalculator.quest/water-bill-calculator',
   },
@@ -17,19 +17,19 @@ export default function WaterBillCalculatorPage() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm mb-6">
             <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
-            Free Water Bill Calculator UK
+            Free Water Bills Calculator UK
           </div>
 
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Water Bill{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-              Calculator UK
+              Estimate UK
             </span>
           </h1>
 
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-            Use our free <strong>water bill calculator UK</strong> to estimate your annual <strong>water bill</strong>.
-            This <strong>water bill calculator</strong> works for both metered and unmetered UK households.
+            Use our free <strong>water bills calculator UK</strong> to get a <strong>water bill estimate</strong>.
+            This <strong>water bill calculator</strong> provides accurate <strong>water bills estimates</strong> for both metered and unmetered UK households.
           </p>
         </div>
 
