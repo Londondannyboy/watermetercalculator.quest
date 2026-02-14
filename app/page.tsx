@@ -114,6 +114,32 @@ const howToJsonLd = {
 export default function HomePage() {
   return (
     <>
+      {/* SEO Internal Links Bar */}
+      <div className="bg-slate-900/80 border-b border-slate-800 py-2">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm">
+            <Link href="/" className="text-slate-400 hover:text-cyan-400 transition-colors">
+              Water Meter Calculator UK
+            </Link>
+            <Link href="/water-bill-calculator" className="text-slate-400 hover:text-cyan-400 transition-colors">
+              Water Bill Calculator UK
+            </Link>
+            <Link href="/water-usage-calculator" className="text-slate-400 hover:text-cyan-400 transition-colors">
+              Water Usage Calculator UK
+            </Link>
+            <Link href="/metered-vs-unmetered" className="text-slate-400 hover:text-cyan-400 transition-colors">
+              Metered vs Unmetered Water
+            </Link>
+            <Link href="/articles" className="text-slate-400 hover:text-cyan-400 transition-colors">
+              Water Saving Guides
+            </Link>
+            <Link href="/contact" className="text-slate-400 hover:text-cyan-400 transition-colors">
+              Contact Water Meter Calculator UK
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -127,6 +153,14 @@ export default function HomePage() {
       <section className="relative py-16 sm:py-24 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent" />
+        
+        {/* Water Meter Image */}
+        <img 
+          src="/water-meter-calculator-uk.svg" 
+          alt="Water Meter Calculator UK - Free savings calculator for UK households"
+          title="Water Meter Calculator UK - Compare metered vs unmetered water bills"
+          className="absolute top-10 right-10 w-32 h-32 opacity-10"
+        />
 
         <div className="relative max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm mb-6">
@@ -135,15 +169,15 @@ export default function HomePage() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Water Meter{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-              Calculator UK
+              Water Meter Calculator UK
             </span>
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-8">
             Use our free <strong>water meter calculator UK</strong> to find out if switching to a <strong>water meter</strong> could save you money.
             This <strong>UK water meter calculator</strong> compares your estimated metered and unmetered water bills instantly.
+            The <strong>water meter calculator UK</strong> helps thousands of <strong>UK</strong> households save money every year.
           </p>
 
           {/* Voice Assistant CTA */}
@@ -191,11 +225,17 @@ export default function HomePage() {
       </section>
 
       {/* Calculator Section */}
-      <section id="calculator" className="py-12 px-4 bg-slate-900/50">
-        <div className="max-w-6xl mx-auto">
+      <section id="calculator" className="py-12 px-4 bg-slate-900/50 relative">
+        <img 
+          src="/uk-water-meter-calculator.png" 
+          alt="UK Water Meter Calculator - Calculate water meter savings in the UK"
+          title="UK Water Meter Calculator - Free tool for UK households"
+          className="absolute bottom-0 left-0 w-48 h-48 opacity-5"
+        />
+        <div className="max-w-6xl mx-auto relative">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-white mb-2">Free Water Meter Calculator UK</h2>
-            <p className="text-slate-400">Enter your details below to calculate if a <strong>water meter UK</strong> will save you money</p>
+            <p className="text-slate-400">Enter your details below to calculate if a <strong>water meter calculator UK</strong> will save you money in the <strong>UK</strong></p>
           </div>
           <WaterMeterCalculator />
         </div>
@@ -219,7 +259,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Metered Water Bills</h3>
               <div className="space-y-2 text-sm text-slate-400">
-                <p>With a <strong>water meter</strong>, you pay for what you actually use. The <strong>water meter calculator</strong> estimates:</p>
+                <p>With a <strong>water meter</strong> in the <strong>UK</strong>, you pay for what you actually use. The <strong>water meter calculator UK</strong> estimates:</p>
                 <p><strong className="text-slate-300">Water charge</strong> = Usage (m³) × Water rate (~£1.85/m³)</p>
                 <p><strong className="text-slate-300">Sewage charge</strong> = Usage (m³) × Sewage rate (~£1.45/m³)</p>
                 <p><strong className="text-slate-300">Standing charge</strong> = Fixed annual amount (~£45/year)</p>
@@ -233,7 +273,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Unmetered Water Bills</h3>
               <div className="space-y-2 text-sm text-slate-400">
-                <p>Without a <strong>water meter</strong>, you pay based on property value:</p>
+                <p>Without a <strong>water meter</strong> in the <strong>UK</strong>, you pay based on property value:</p>
                 <p><strong className="text-slate-300">Bill</strong> = Rateable value × Water company rate</p>
                 <p className="mt-2">Larger properties pay more regardless of actual water usage. Our <strong>water meter calculator</strong> estimates unmetered bills based on bedrooms:</p>
                 <ul className="list-disc ml-4 mt-2">
